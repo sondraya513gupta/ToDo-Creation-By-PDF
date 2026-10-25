@@ -5,10 +5,15 @@ from app.executor.step_executor import StepExecutor
 from app.reflection.self_reflection import SelfReflection
 from app.document.docx_generator import DocxGenerator
 from app.services.gemini import GeminiService
+from app.services.todo_service import TodoService
 
 
 def get_gemini_service() -> GeminiService:
     return GeminiService()
+
+
+def get_todo_service(gemini_service: GeminiService = Depends(get_gemini_service)) -> TodoService:
+    return TodoService(gemini_service=gemini_service)
 
 
 def get_planner(gemini_service: GeminiService = Depends(get_gemini_service)) -> GeminiPlanner:

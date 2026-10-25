@@ -1,12 +1,17 @@
-# Autonomous AI Agent Document Generator
+# Autonomous AI Agent & ToDoFlow Mobile App
 
-An enterprise-grade Python application built using Clean Architecture principles. It exposes a FastAPI endpoint that receives natural language requests, plans and executes tasks using the Gemini API, performs self-reflection and auto-correction checks, and compiles the final verified draft into a styled, professional Microsoft Word (.docx) document.
+An enterprise-grade Python application built using Clean Architecture principles, integrated with a **React Native (Expo)** mobile application. It exposes FastAPI endpoints for To-Do management, AI goal planning, PDF document task extraction, and autonomous Microsoft Word (.docx) document generation with Gemini LLM.
 
 ---
 
-## Project Overview
+## 📱 React Native Mobile App (`mobile/`)
+A cross-platform mobile client featuring:
+- **Interactive ToDo Manager**: Checkboxes, priority badges, category filters, and live search.
+- **🤖 AI Task Planner**: Type any natural language goal and let Gemini AI automatically break it down into milestones and tasks.
+- **📄 PDF To-Do Extractor**: Pick any PDF document (syllabus, notes, project specs) to extract actionable tasks.
+- **📑 Autonomous Document Agent**: Launch full document generation pipelines directly from your phone.
+- **⚡ Offline Mode**: AsyncStorage offline fallback & quick IP network switcher for physical phone testing via Expo Go.
 
-The Autonomous AI Agent accepts a prompt requesting a document type (e.g., meeting minutes, business proposal, technical report), analyzes the prompt, dynamically builds a list of milestone steps, generates markdown content for each milestone, audits the consolidated content against structure criteria, repairs any missing sections, and formats the output into a branded Word document stored inside `generated_docs/`.
 
 ---
 

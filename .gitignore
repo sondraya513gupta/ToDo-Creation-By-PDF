@@ -52,3 +52,9 @@ outputs/*.docx
 # OS files
 .DS_Store
 Thumbs.db
+
+# Mobile (React Native / Expo)
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/web-build/
